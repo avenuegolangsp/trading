@@ -1,0 +1,170 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2025-09-15",
+    "market": "NYSE/NASDAQ",
+    "currency": "USD",
+    "total_symbols": 20,
+    "description": "Dataset de 20 ações americanas para sistema de trading"
+  },
+  "stocks": {
+    "AAPL": {
+      "company": "Apple Inc.",
+      "sector": "Tecnologia",
+      "min_price": 200.00,
+      "market_cap": "2.8T",
+      "description": "Empresa de tecnologia focada em dispositivos eletrônicos"
+    },
+    "MSFT": {
+      "company": "Microsoft Corp.",
+      "sector": "Tecnologia", 
+      "min_price": 150.00,
+      "market_cap": "2.6T",
+      "description": "Líder mundial em software e serviços de nuvem"
+    },
+    "GOOGL": {
+      "company": "Alphabet Inc.",
+      "sector": "Tecnologia",
+      "min_price": 150.00,
+      "market_cap": "1.7T",
+      "description": "Empresa controladora do Google"
+    },
+    "TSLA": {
+      "company": "Tesla Inc.",
+      "sector": "Automotivo",
+      "min_price": 100.00,
+      "market_cap": "800B",
+      "description": "Fabricante de veículos elétricos"
+    },
+    "NVDA": {
+      "company": "NVIDIA Corp.",
+      "sector": "Tecnologia",
+      "min_price": 200.00,
+      "market_cap": "1.2T",
+      "description": "Líder em processadores gráficos e IA"
+    },
+    "META": {
+      "company": "Meta Platforms",
+      "sector": "Tecnologia",
+      "min_price": 150.00,
+      "market_cap": "750B",
+      "description": "Empresa de redes sociais"
+    },
+    "JPM": {
+      "company": "JPMorgan Chase",
+      "sector": "Financeiro",
+      "min_price": 100.00,
+      "market_cap": "450B",
+      "description": "Maior banco dos Estados Unidos"
+    },
+    "V": {
+      "company": "Visa Inc.",
+      "sector": "Financeiro",
+      "min_price": 150.00,
+      "market_cap": "500B",
+      "description": "Rede global de pagamentos"
+    },
+    "MA": {
+      "company": "Mastercard",
+      "sector": "Financeiro",
+      "min_price": 200.00,
+      "market_cap": "400B",
+      "description": "Rede global de pagamentos"
+    },
+    "JNJ": {
+      "company": "Johnson & Johnson",
+      "sector": "Saúde",
+      "min_price": 100.00,
+      "market_cap": "450B",
+      "description": "Empresa farmacêutica e de produtos de saúde"
+    },
+    "UNH": {
+      "company": "UnitedHealth",
+      "sector": "Saúde",
+      "min_price": 300.00,
+      "market_cap": "500B",
+      "description": "Maior empresa de seguros de saúde dos EUA"
+    },
+    "WMT": {
+      "company": "Walmart Inc.",
+      "sector": "Consumo",
+      "min_price": 100.00,
+      "market_cap": "400B",
+      "description": "Maior rede de varejo do mundo"
+    },
+    "PG": {
+      "company": "Procter & Gamble",
+      "sector": "Consumo",
+      "min_price": 100.00,
+      "market_cap": "350B",
+      "description": "Empresa de bens de consumo"
+    },
+    "HD": {
+      "company": "Home Depot",
+      "sector": "Consumo",
+      "min_price": 200.00,
+      "market_cap": "350B",
+      "description": "Maior rede de lojas de materiais de construção"
+    },
+    "KO": {
+      "company": "Coca-Cola",
+      "sector": "Consumo",
+      "min_price": 50.00,
+      "market_cap": "250B",
+      "description": "Maior empresa de bebidas do mundo"
+    },
+    "DIS": {
+      "company": "Walt Disney",
+      "sector": "Entretenimento",
+      "min_price": 80.00,
+      "market_cap": "180B",
+      "description": "Empresa de entretenimento e mídia"
+    },
+    "NFLX": {
+      "company": "Netflix",
+      "sector": "Streaming",
+      "min_price": 300.00,
+      "market_cap": "200B",
+      "description": "Plataforma líder de streaming de vídeo"
+    },
+    "BAC": {
+      "company": "Bank of America",
+      "sector": "Financeiro",
+      "min_price": 25.00,
+      "market_cap": "250B",
+      "description": "Segundo maior banco dos Estados Unidos"
+    },
+    "XOM": {
+      "company": "ExxonMobil",
+      "sector": "Energia",
+      "min_price": 80.00,
+      "market_cap": "350B",
+      "description": "Uma das maiores empresas petrolíferas do mundo"
+    },
+    "PFE": {
+      "company": "Pfizer",
+      "sector": "Saúde",
+      "min_price": 25.00,
+      "market_cap": "200B",
+      "description": "Empresa farmacêutica multinacional"
+    }
+  },
+  "market_hours": {
+    "timezone": "America/New_York",
+    "regular_hours": {
+      "open": "09:30",
+      "close": "16:00",
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+    },
+    "closed_days": ["Sunday"],
+    "holidays": [
+      "2025-01-01", "2025-01-20", "2025-02-17", "2025-04-18",
+      "2025-05-26", "2025-07-04", "2025-09-01", "2025-11-27", "2025-12-25"
+    ]
+  },
+  "trading_rules": {
+    "min_order_value": 1.00,
+    "tick_size": 0.01,
+    "lot_size": 1
+  }
+}
