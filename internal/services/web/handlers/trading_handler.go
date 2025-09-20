@@ -1,9 +1,14 @@
 package handlers
 
-import "github.com/emicklei/go-restful/v3"
+import (
+	"trading/internal/services/engine/portfolio"
+
+	"github.com/emicklei/go-restful/v3"
+)
 
 // TradingHandler gerencia endpoints do sistema de trading
 type TradingHandler struct {
+	portfolioService *portfolio.Service
 }
 
 // CreateOrder cria uma nova ordem de compra ou venda

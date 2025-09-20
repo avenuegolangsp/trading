@@ -2,11 +2,13 @@ package portfolio
 
 import (
 	"trading/internal/domain"
+	"trading/internal/repository"
 )
 
 // Service gerencia portfolios dos usuários
 type Service struct {
-	// TODO: Implementar campos necessários
+	orderRepo *repository.InMemoryUserRepository
+	stockRepo *repository.InMemoryStockRepository
 }
 
 // User representa dados de usuário
@@ -23,9 +25,10 @@ type User struct {
 }
 
 // NewService cria um novo serviço de portfolio
-func NewService() *Service {
+func NewService(orderRepo *repository.InMemoryUserRepository, stockRepo *repository.InMemoryStockRepository) *Service {
 	service := &Service{
-		// TODO: Inicializar campos
+		orderRepo: orderRepo,
+		stockRepo: stockRepo,
 	}
 
 	// TODO: Carregar dados de usuários do arquivo JSON

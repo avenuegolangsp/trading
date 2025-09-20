@@ -3,6 +3,8 @@ package handlers
 import (
 	"log"
 	"time"
+	"trading/internal/repository"
+	"trading/internal/services/engine/portfolio"
 
 	restful "github.com/emicklei/go-restful/v3"
 )
@@ -15,8 +17,21 @@ type InternalWebRestfulContainer struct {
 
 // NewInternalWebRestfulContainer cria um novo container RESTful
 func NewInternalWebRestfulContainer() *InternalWebRestfulContainer {
+
+	repoOrder, err := repository.NewInMemoryUserRepositoryFromJSON("/home/lamao/Downloads/golangsp/trading/data/users.json")
+	if err != nil {
+		log.Fatal("❌ Erro ao carregar usuários:", err)
+	}
+
+	repoStock, err := repository.NewInMemoryStockRepositoryFromJSON("/home/lamao/Downloads/golangsp/trading/data/stocks.json")
+	if err != nil {
+		log.Fatal("❌ Erro ao carregar ações:", err)
+	}
+
 	container := &InternalWebRestfulContainer{
-		tradingHandler: &TradingHandler{},
+		tradingHandler: &TradingHandler{
+			portfolioService: portfolio.NewService(repoOrder, repoStock),
+		},
 	}
 
 	// Configura web service
